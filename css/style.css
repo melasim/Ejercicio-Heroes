@@ -1,86 +1,319 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nunito:wght@200&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2? family = DM + Serif + Display & familia = M + PLUS + 2: wght @ 300 &family = Nunito: wght @ 200 & family = Raleway: wght @ 100; 200 & familia = Roboto: wght @ 100; 300; 400 & display = swap ');
 *{
-    font-family: roboto;
+    font-family: 'roboto', serif;
     margin: 0%;
+    box-sizing: border-box;
+}
+html{
+    font-size: 16px;
 }
 .header1{
     background-color: #1CD1B0;
-    font-size: 15px;
+    font-size: 1rem;
     padding: 10px;
+    width: 100%;
 }
 .header2{
     background-color: #00669F;
-    font-size: 40px;
+    color: white;
     padding: 10px;
-    box-shadow: 4px 7px 5px grey;
-    position: fixed;
-    top:38px;
+    position: sticky;
+    top:0px;
     width:100%;
     z-index: 15;
-}
-main{
-    display: inline-flex;
-    flex-direction: row;
-    height: 900px;
-    width: 100%;
-    justify-content: space-around;
+    display: flex;
     align-items: center;
 }
-main article{
-    display: inline-block;
+.header2 h1{
+    font-weight: lighter;
+    font-size: 2.5rem;
+}
+body nav ul{
+    background: #001D2D;
+    display:flex;
+    justify-content:flex-end;
+    align-items: center;
+    height: 6vh;
+    list-style-type: none;
+    color: white;
+}
+body nav ul li a{
+    color: white;
+    text-decoration: none;
+    margin:0vw 2vw;
+    font-weight: lighter;
+    
+}
+main section{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10%;
+}
+main section article{
     position: relative;
     width: 300px;
-    height: 560px;
-    margin-left: 30px;
+    height: 590px;
     background-color: #F3F3F3;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 16px 16px 0px 0px;
+    border-radius: 16px 16px 0 0;
+    text-align: center;
+    z-index: 0;
 }
-.batman{
+main section article div {
+    padding: 10px;
+    width: 100%;
+    height: 194px;
+    border-radius: 16px 16px 0 0;
+    z-index: 1;
+}
+main section article div.fondo.fondobatman{
+    background:url(../img/fondobatman.png);
+    background-size: cover;
+}
+main section article div.fondo.fondomujermaravilla{
+    background:url(../img/mujermaravillaFONDO.png);
+    background-size: cover;
+}
+main section article div.fondo.fondosuperman{
+    background:url(../img/supermanFONDO.png);
+    background-size: cover;
+}
+main section article div.fondo.fondoharley{
+    background:url(../img/fondoharley.png);
+    background-size: cover;
+}
+article .cara{
     border-radius: 50%;
     box-shadow:(0px 4px 4px rgba(0, 0, 0, 0.25));
     position: absolute;
-    top:126px;
-    left:90px;
-    right:90px;
+    left: calc( 50% - (125px / 2));
+    top: calc( 194px - (125px /2) );
+    width: 125px;
+    z-index: 2;
 }
-.heart{
+article .heart{
     color: red;
     position: absolute;
     top: 16px;
     left: 21px;
-    z-index: 100;
+    z-index: 1;
 }
-.portada{
-    z-index: 0;
-}
-.negrita{
-    font-weight: bold;
+article h4{
+    font-weight: 400px;
+    text-transform: uppercase;
+    font-size: 1.4rem;
     text-align: center;
-    padding-top: 50px;
-    font-size: 30px;
+    margin-top: 75px;
 }
 .cuerpo{
-    font-size: 16px;
-    padding: 16px;
+    font-size: 1rem;
+    text-align: left;
+    margin: 10px 10px;
+    position: relative;
+    height: 190px;
+    
 }
-.boton{
-    position: absolute;
-    top: 440px;
-    left:85px;
+article .boton{
     background-color: #00669F;
     color: white;
-    padding: 15px 35px 15px 35px;
-    border-bottom: 1px transparent;
-    background-clip: padding-box;
-    border-radius: .25rem;
-    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
-    box-sizing: border-box;
+    padding: 10px 30px;
+    margin: 25px;
+    border:none;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
 }
+.mas{
+    position: fixed;
+    right: 1vw;
+    top: 46vh;
+    z-index: 100;
+    width: 4vw;
+    cursor: pointer;
+}
+
 footer{
     background-color: #00669F;
     color: white;
     font-size: 16px;
     padding: 15px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    bottom: 0%;
+}
+.oculto{
+    display: none;
+}
+@media (max-width: 1200px) {
+    *{
+        box-sizing: border-box;
+    }
+    .oculto{
+        display: block ;
+        }
+    footer{
+        margin-bottom: 0%;
+        font-size: 1.5rem;
+    }
+    main{
+        width: 100%;
+    }
+    main section{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .mas{
+        position: fixed;
+        right: 1vw;
+        top: 46vh;
+        z-index: 100;
+        width: 9vw;
+        cursor: pointer;
+    }
+    #login{
+        width: 100%;
+        height: 85vh;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+    .login.registro{
+        width: 100%;
+        height: 80vh;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        margin-top: 0%;
+    }
+    form div input, select, textarea{
+        width:70vw;
+        height: 5.4vh;
+        margin: 2vh;
+        font-size: 1.5rem;    
+    }
+
+}
+
+@media (max-width: 480px) {
+    html{
+        font-size: 16px;
+    }
+    .header2 .mediacel{
+        font-size: 1.5rem;
+    }
+    .oculto{
+        display: none;
+    }
+    main section article{
+        margin:5% 0% 15% ;
+    }
+    footer{
+        margin-bottom: 0%;
+        font-size: 0.8rem;
+    }
+    #login{
+        height: 75vh;
+    }
+    #login form{
+        height: 55vh;
+    }
+    .login.registro{
+        height: 75vh;
+    }
+    .login h2{
+        font-size: 2.5rem;
+    }
+    main section form div input, select{
+        width:75vw;
+        height: 3.5vh;
+        margin: 2vh;
+        font-size: 1rem;    
+    }
+    main section form div textarea{
+        width: 75vw;
+    }
+}
+
+/* estilos de login, regisro y contacto */
+
+main section h2{
+    align-self: flex-start;
+    font-family: 'M PLUS 2', sans-serif;
+    font-weight: 700;
+    font-size: 4rem;
+    color:  #333333;
+    padding-left: 25%;
+    margin-bottom: 1.5vh;
+}
+.login{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100vw;
+    height: 73vh;
+}
+.login.registro{
+    margin: 5% 0% 5%;
+}
+main section form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+form div input, select{
+    width:40vw;
+    height: 5.4vh;
+    margin: 2vh;
+}
+form div textarea{
+    width: 40vw;
+    height: 22vh;
+}
+select{
+    border: 1px solid grey;
+}
+form button{
+    background-color: #1CD1B0;
+    border: none;
+    cursor: pointer;
+    width: 40vw;
+    height: 5vh;
+    border-radius: 23px;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 5.2vh;
+    margin-bottom: 1.8vh;
+}
+button.reset{
+    width: 20vw;
+    background-color: #888888;
+    color: white;
+    font-weight: lighter;
+}
+button.register{
+    width: 20vw;
+}
+a{
+    text-decoration: none;
+    color: rgb(42, 94, 192);
+}
+footer span a img{
+    cursor: pointer;
+    position: absolute;
+    left: 3%;
+    bottom: 25%;
+    width: 20px;    
+}
+@media (min-width:1400px) {
+    .login{
+        height: 80vh;
+    }
 }
